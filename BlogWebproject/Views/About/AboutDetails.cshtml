@@ -1,0 +1,22 @@
+﻿@using BlogWebproject.Models
+@model List<About>
+<div class="about-me-timeline">
+
+    @foreach (var x in Model)
+    {
+
+
+        <!-- TIMELINE_ITEM_1 -->
+        <!-- TIMELINE_ITEM_START -->
+        <div class="mt-5 mb-2 text-dark timeline-year">@x.Year<span class="text-muted ml-2">@x.Title</span></div>
+        <div class="ml-2 ml-4 timeline-content">
+            <p>
+             @Html.Raw(x.Detail)
+            </p>
+        </div>
+
+    }
+</div>
+  
+
+

@@ -1,0 +1,53 @@
+﻿@using BlogWebproject.Models
+@model List<About>
+@{
+    ViewBag.Title = "Aboutdetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="container-fluid">
+        <h1 class="mt-4">Abouts</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/Admin/Index">Admin</a></li>
+            <li class="breadcrumb-item active">About Page</li>
+        </ol>
+
+
+    </div>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">About-Year</th>
+                <th scope="col">About-Title</th>
+                <th scope="col">About-Detail</th>
+                <th scope="col"><i class="fas fa-cog"></i> Manage </th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (var x in Model)
+            {
+
+
+                <tr>
+                    <th scope="row">@x.Year</th>
+                    <td>@x.Title</td>
+                    <td>@x.Detail.Substring(0, 65)</td>
+                    <td>
+                        <a href="/Admin/Aboutdelete/@x.AboutId" class="btn-sm btn-danger " style="color:white;">Delete</a>
+                        <a href="/Admin/AboutdetailsShown/@x.AboutId" class="btn-sm btn-warning" style="color:white;">Update</a>
+                        <a href="/Admin/Aboutdetail/@x.AboutId" class="btn-sm btn-success" style="color:white;">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    <a href="/Admin/NewAbout" class="btn btn-info text-white"><i class="fas fa-plus"></i> Add New</a>
+
+
+</div>
+

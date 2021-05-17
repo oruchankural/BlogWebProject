@@ -1,0 +1,30 @@
+﻿@using BlogWebproject.Models
+@model List<Blog>
+
+
+<section class="my-5">
+  
+
+
+    <div class="post-preview">
+        @foreach (var blog in Model)
+        {
+            <a href="/Blog/Blogdetails/@blog.BlogID">
+                <h2 class="post-title">@Html.Raw(blog.BlogTitle)</h2>
+                <h3 class="post-subtitle">
+                    @Html.Raw(blog.BlogText.Substring(0,75))
+                </h3>
+            </a>
+            <p class="post-meta">
+                Posted by
+                <a href="#!">
+                    Doğanay Üzüm
+                </a>
+                on @blog.BlogDatetime.ToShortDateString()
+            </p>
+        }
+    </div>
+        <hr />
+  
+
+</section>

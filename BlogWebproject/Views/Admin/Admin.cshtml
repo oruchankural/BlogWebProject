@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="container-fluid">
+        <h1 class="mt-4">Admin Information</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/Admin/Index">Admin</a></li>
+            <li class="breadcrumb-item active">Admin Info</li>
+        </ol>
+        <div class="card" style="width: 18rem;margin:auto;">
+            <img class="card-img-top" src="~/Content/Admin/1802979.png" alt="Card image cap">
+  
+            <div class="card-body">
+                <h5 class="card-title  text-dark" style="font-weight:bold;">Admin Info</h5>
+                <p class="card-text text-info">Web site - Blog Project</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Name & Surname : @ViewBag.name </li>
+                <li class="list-group-item">Email Address : @ViewBag.email </li>
+                <li class="list-group-item">Username : @ViewBag.username </li>
+                <li class="list-group-item">Password : @ViewBag.password </li>
+
+
+            </ul>
+            <div class="card-body">
+                <a href="#" class="btn btn-dark">Update</a>
+            </div>
+        </div>
+
+            
+            
+        </div>
+
+    </div>
+    
+
+
+

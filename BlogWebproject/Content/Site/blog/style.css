@@ -1,0 +1,104 @@
+body {
+	overflow-y: scroll;
+}
+
+.blog-header-text {
+	font-size: 2rem;
+	font-family: 'Playfair Display';
+}
+
+.welcome-text {
+	background-image: url(./images/welcome-bg-dark.jpg);
+	background-position: 0% 70%;
+	background-size: cover;
+	min-height: 50vh;
+}
+
+footer {
+	/*background: #00A34D;*/
+	background: #492446;
+	color: #FFF;
+}
+
+/*  */
+footer .bloginfo-bar {
+	border-top: 1px solid #EEE;
+	color: #BBB;
+}
+
+
+/*  */
+footer .copyright-bar {
+	border-top: 1px solid #EEE;
+}
+
+
+/* links bar */
+footer .footer-title {
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+footer .divider {
+	border-bottom: 1px solid #EEE;
+	display: block;
+	width: 15%;
+	min-width: 40px;
+}
+
+footer ul li a {
+	color: #FFF;
+}
+footer ul li a:hover {
+	color: #FFF;
+}
+
+footer .iconic-social {
+	color: #FFF;
+	font-size: 1.4rem;
+	text-decoration: none;
+}
+footer .iconic-social span {
+	font-size: 1rem;
+	vertical-align: middle;
+}
+
+
+
+.image-box {
+	min-width: 150px;
+	width: 100%;
+	max-width: 180px;
+	margin: 0 auto;
+}
+.image-box .image {
+	padding-top: 160%;
+	/*border-radius: 50%;*/
+	border: 3px solid #fff;
+	box-shadow: 0 0 0 3px #aaa;
+	background-position: center;
+	/*background-size: 60%;*/
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.detailers .text,
+.detailers a {
+	text-decoration: none;
+	color: #666;
+	display: flex;
+}
+.detailers i {
+	margin-right: 0.4rem;
+	font-size: 1.4rem;
+}
+
+
+.timeline-year {
+	/*font-weight: bold;*/
+	font-size: 1.6rem;
+}
+.timeline-year .text-muted {
+	font-weight: normal;
+	font-size: 1rem;
+	font-style: italic;
+}

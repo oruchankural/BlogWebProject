@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<main id="main-content">
+
+    <div class="container py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mb-5">
+                    <h1>GET IN TOUCH</h1>
+                    <hr />
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Name</label>
+                            <input type="text" name="Name" class="form-control" id="exampleFormControlInput1" placeholder="Your name and surname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email address</label>
+                            <input type="email" name="EmailAddress" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Phone Number</label>
+                            <input type="tel" name="Phone" class="form-control" id="exampleFormControlInput1" placeholder="5554443355" maxlength="11" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Message</label>
+                            <textarea type="text" name="Message" class="form-control" >
+
+                            </textarea>
+                        </div>
+                        <hr />
+                        <button class="btn-block  btn-primary" style="border-color:white;" type="submit">Send</button>
+                    </form>
+
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    
+</main>
+

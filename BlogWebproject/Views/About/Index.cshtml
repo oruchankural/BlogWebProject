@@ -1,0 +1,67 @@
+﻿@model BlogWebproject.Models.About
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main-content">
+
+    <div class="row profile-table">
+        <div class="col-md-3 col-lg-3 is-3">
+            <div class="image-box">
+                <div class="image" style="background-image: url('/Content/Site/blog/images/mhmt.jpg');"></div>
+
+            </div>
+        </div>
+        <div class="col text-center text-md-left pt-3 pt-md-0 pl-3 profile-column">
+            <h1>Doğanay Üzüm</h1>
+            <div class="row detailers">
+                <div class="col-6 text-left col-lg-4 py-2">
+                    <a href="http://facebook.com/username" target="_blank" class="">
+                        <i class="icofont-facebook" style="color: #0960a5"></i><span>username</span>
+                    </a>
+                </div>
+
+                <div class="col-6 text-left col-lg-4 py-2">
+                    <a href="http://twitter.com/username" target="_blank" class="">
+                        <i class="icofont-twitter" style="color: #3273DC"></i><span>username</span>
+                    </a>
+                </div>
+
+
+                <div class="col-6 text-left col-lg-4 py-2">
+                    <a href="http://instagram.com/username" target="_blank" class="">
+                        <i class="icofont-instagram" style="color: #9c27b0"></i><span>username</span>
+                    </a>
+                </div>
+
+
+
+                <div class="col-6 text-left col-lg-4 py-2">
+                    <div class="text">
+                        <i class="icofont-graduate"></i>
+                        <!-- masaüstü -->
+                        <span class="d-none d-lg-inline">İstanbul Esenyurt Üniversitesi</span>
+                        <!-- mobil -->
+                        <span class="d-inline d-lg-none">ESU</span>
+                    </div>
+                </div>
+                <div class="col-6 text-left col-lg-4 py-2">
+                    <div class="text"><i class="icofont-bag-alt" style="color: #795548"></i><span>Web Developer</span></div>
+                </div>
+                <div class="col-6 text-left col-lg-4 py-2">
+                    <div class="text"><i class="icofont-google-map" style="color: #ff9800"></i><span>İstanbul</span></div>
+                </div>
+                <div class="col-24 mt-4 text-left bio-column">
+                    Bu benim kişisel yazım olacak. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit vestibulum malesuada. Curabitur cursus purus ut elit ornare, eu varius tortor dapibus. Vestibulum venenatis porta feugiat. Curabitur id suscipit nisl. Sed molestie pulvinar ante, a pretium purus lacinia id. Praesent sed commodo quam. Nulla urna enim, semper egestas elit at, volutpat commodo mauris. Duis in malesuada ipsum. Etiam eu risus.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============== TIMELINE ==============  -->
+
+    @Html.Action("AboutDetails", "About")
+
+</main>
+

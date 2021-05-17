@@ -1,0 +1,49 @@
+﻿@using BlogWebproject.Models
+@model List<Blog>
+@{
+    ViewBag.Title = "Blogs";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <div class="container-fluid">
+        <h1 class="mt-4">Blogs</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/Admin/Index">Admin</a></li>
+            <li class="breadcrumb-item active">Blogs</li>
+        </ol>
+    </div>
+   <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Blog Title</th>
+                <th scope="col">Blog Text</th>
+                <th scope="col">Blog Image</th>
+                <th scope="col">Blog Date</th>
+                <th scope="col"><i class="fas fa-cog"></i> Manage </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+
+
+                <tr>
+                    <th scope="row">@x.BlogTitle.Substring(0,25)</th>
+                    <td>@x.BlogText.Substring(0, 35)</td>
+                    <td><img src="@x.BlogImage" width="100" height="100" /></td>
+                    <td>@x.BlogDatetime.ToShortDateString()</td>
+                    <td>
+                        <a href="/Admin/Blogdelete/@x.BlogID" class="btn-sm btn-danger" style="color:white;">Delete</a>
+                        <a href="/Admin/BlogShown/@x.BlogID" class="btn-sm btn-warning" style="color:white;">Update</a>
+                        <a href="/Admin/Blogdetail/@x.BlogID" class="btn-sm btn-success" style="color:white;">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a  href="/Admin/NewBlog" class="btn btn-info text-white"><i class="fas fa-plus"></i> Add New</a>
+
+
+
+</div>

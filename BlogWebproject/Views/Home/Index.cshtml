@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+        <main id="main-content">
+
+            <div class="welcome-text rounded-lg py-5 d-flex flex-column text-white justify-content-center align-items-center">
+                <h1 class="flex-grow-1 d-flex align-items-center">
+                    Welcome to my blog!
+                </h1>
+                <h4 class="name  mt-5 mb-0 font-weight-normal">
+                    I'm Doğanay Üzüm
+                </h4>
+                <p>
+                    And this is my personal blog.
+                </p>
+                <div>
+                    <a href="/About/Index" class="btn btn-sm btn-light">
+                        Learn more about me &rarr;
+                    </a>
+                </div>
+            </div>
+            @Html.Action("Index","Blog")
+
+
+        </main>
+    

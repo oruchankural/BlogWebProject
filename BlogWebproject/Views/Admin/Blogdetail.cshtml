@@ -1,0 +1,50 @@
+﻿@using BlogWebproject.Models
+@model List<Blog>
+@{
+    ViewBag.Title = "Blogdetail";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    @foreach (var x in Model)
+    {
+
+
+        <div class="container-fluid">
+            <h1 class="mt-4"></h1>
+            <div class="container-md">
+                <a><img src="@x.BlogImage" /></a>
+
+                <div class="row align-items-md-stretch">
+                    <div class="col-md">
+                        <hr />
+                        <div class=" p-3 text-white bg-dark rounded-3">
+                            <h3 class="text-warning">Title of Blog</h3>
+                            <p>@x.BlogTitle</p>
+                        </div>
+                        <hr />
+                        <div class=" p-3 text-white bg-dark rounded-3">
+                            <h3 class="text-warning">Text of Blog</h3>
+                            <p>@Html.Raw(x.BlogText)</p>
+                        </div>
+                        <hr />
+                        <div class=" p-3 text-white bg-dark rounded-3">
+                            <h3 class="text-warning">Date of Blog</h3>
+                            <p>@x.BlogDatetime.ToShortDateString()</p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <br />
+
+            </div>
+
+
+        </div>
+
+
+    }
+
+</div>
+
